@@ -1,0 +1,43 @@
+{% include 'frontend/master/master.html' %}
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Update Details</h5>
+
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" class="form-control" name="first_name" value="{{f.first_name}}" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" class="form-control" name="last_name" value="{{f.last_name}}"
+                               placeholder="last name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" value="{{f.email}}"
+                               placeholder="eg-hello@gmail.com">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Update</button>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+{% endblock %}
